@@ -40,3 +40,15 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Angular specific
+/dist
+/node_modules
+.angular-config.json
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Environments
+environments
