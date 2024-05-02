@@ -9,6 +9,7 @@ import { FormUserResponse } from '../interfaces/form-user-response.interface.ts'
 })
 export class UserService {
   private endpointLoginURl = `${environment.apiUrl}login`;
+  private endpointRegisterURl = `${environment.apiUrl}user`;
 
   constructor(private http: HttpClient) {}
 
@@ -18,5 +19,9 @@ export class UserService {
     return this.http.post<FormUserResponse>(this.endpointLoginURl, data);
   }
 
-  
+  sendDataRegister(login: string, password: string) : Observable<FormUserResponse> {
+    const data = {login, password};
+
+    return this.http.post<FormUserResponse>(this.endpointRegisterURl, data);
+  }
 }
