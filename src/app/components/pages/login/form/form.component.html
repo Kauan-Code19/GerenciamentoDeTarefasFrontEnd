@@ -1,0 +1,13 @@
+<form [formGroup]="inputsForm">
+    <div class="form-floating mb-2 p-1">
+        <input type="email" class="form-control p-2" id="input_email" placeholder="name@example.com" 
+        formControlName="login">
+        <label for="input_email">Email</label>
+      </div>
+      <div class="form-floating mb-3 p-1">
+        <input type="password" class="form-control p-2" id="input_password" placeholder="Password" 
+        formControlName="password">
+        <label for="input_password">Password</label>
+      </div>
+      <button-send-data-user-component (click)="submit()" [disabled]="!inputsForm.valid" btn-text="Sing In"></button-send-data-user-component>
+</form>
