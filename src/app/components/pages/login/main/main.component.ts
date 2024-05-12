@@ -3,7 +3,7 @@ import { FormComponent } from '../form/form.component';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'main-component',
+  selector: 'main-component-login',
   standalone: true,
   imports: [FormComponent, RouterModule],
   providers: [Router],
