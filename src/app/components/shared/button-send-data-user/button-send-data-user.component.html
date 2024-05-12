@@ -6,8 +6,10 @@
     
         @if (isLoginPage()) {
             {{btnText}}
-        }@else {
+        }@else if (isRegisterPage()) {
             Register
+        }@else {
+            Edit
         }
 
     </button>

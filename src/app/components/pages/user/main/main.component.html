@@ -1,0 +1,15 @@
+<div class="container-fluid d-flex justify-content-center align-items-center h-100 no-scroll background">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <img [src]="userImage" priority  alt="imagem do usuário" class="userImage">
+                <h2 class="text-center mb-4">Bem-vindo, {{userName}}</h2>
+                <div class="d-grid gap-2 d-md-block text-center">
+                    <button-list-tasks-component></button-list-tasks-component>
+                    <button-edit-information-component></button-edit-information-component>
+                    <button-delete-account-component></button-delete-account-component>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

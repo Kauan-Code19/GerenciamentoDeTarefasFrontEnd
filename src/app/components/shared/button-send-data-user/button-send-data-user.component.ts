@@ -25,4 +25,8 @@ export class ButtonSendDataUserComponent {
   isLoginPage() : boolean {
     return this.router.url === '/login';
   }
+
+  isRegisterPage() : boolean {
+    return this.router.url === '/register'
+  }
 }
