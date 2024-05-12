@@ -33,8 +33,11 @@ export class UserService {
     return this.http.post<FormUserResponse>(this.endpointRegisterURl, data);
   }
 
-  sendDataUpdate(id: number, name: string, login: string, password: string) : Observable<FormUserResponse> {
-    const data = {name, login, password};
+  sendDataUpdate
+  (
+    id: number, name: string, login: string, password: string, imgName: string, base64Image: string
+  ) : Observable<FormUserResponse> {
+    const data = {name, login, password, imgName, base64Image};
     const url = `${this.endpointGetUserURL}${id}`;
 
     return this.http.put<FormUserResponse>(url, data);

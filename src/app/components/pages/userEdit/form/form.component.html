@@ -1,0 +1,15 @@
+<form [formGroup]="inputsForm">
+    <div class="form-floating mb-2 p-1">
+        <input type="text" class="form-control p-2" id="input_name" placeholder="name" formControlName="name">
+        <label for="input_name">Name</label>
+    </div>
+    <div class="form-floating mb-2 p-1">
+        <input type="password" class="form-control p-2" id="input_password" placeholder="Password" formControlName="password">
+        <label for="input_password">Password</label>
+    </div>
+    <div class="mb-3 p-1">
+        <input class="form-control" type="file" id="formFile" (change)="onFileSelected($event)">
+    </div>
+        <button-send-data-user-component (click)="submit()" [disabled]="!inputsForm.valid"></button-send-data-user-component>
+</form>
+
